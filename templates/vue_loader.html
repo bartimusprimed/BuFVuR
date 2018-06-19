@@ -1,0 +1,13 @@
+<!DOCTYPE html> {% raw %}
+<script>
+    var vm = new Vue({
+        template: `
+            <h1>{{ greeting }}</h1>
+        `,
+        el: '#root',
+        data: {
+            greeting: "Running Vue from Flask is succcessful."
+        }
+    })
+</script>
+{% endraw %}

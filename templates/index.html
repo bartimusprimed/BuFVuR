@@ -1,0 +1,19 @@
+{% extends "base.html" %} 
+{% block title %} 
+    Index 
+{% endblock %} 
+{% block head %} 
+    {{ super() }} 
+{% endblock %}
+{% block content %}
+<section class="hero is-large">
+    <div class="hero-body">
+        <div class="container">
+            <div id="root">
+                {% include 'vue_loader.html' %}
+                {# Initial Vue component will get injected here. #}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
