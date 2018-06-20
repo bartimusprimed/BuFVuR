@@ -1,18 +1,11 @@
-{% extends "base.html" %} 
-{% block title %} 
-    Index 
-{% endblock %} 
-{% block head %} 
-    {{ super() }} 
-{% endblock %}
-{% block content %}
-<section class="hero is-large">
+<!-- This is our index.html, this uses the base.html so it has access to all the libraries -->
+{% extends "base.html" %} {% block title %} Index Page {% endblock %} {% block content %}
+<section class="hero is-large is-primary is-bold">
     <div class="hero-body">
         <div class="container">
-            <div id="root">
-                {% include 'vue_loader.html' %}
-                {# Initial Vue component will get injected here. #}
-            </div>
+            <!-- Initial Vue component will get injected here. -->
+            <h1 class="title">BuFVuR</h1>
+            <div id="root">{% include 'vue_loader.html' %}</div>
         </div>
     </div>
 </section>

@@ -5,7 +5,6 @@ CORS(app)
 
 
 @app.route('/')
-def hello_world():
-    url_for('static', filename='bulma.css')
-    url_for('static', filename='vue.js')
+def index():
+    # We are just returning the index.html
     return render_template('index.html')

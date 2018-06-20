@@ -1,13 +1,28 @@
-<!DOCTYPE html> {% raw %}
+<!-- This includes the home component -->
+{% include 'components/home.vue' %}
+<!-- The raw tag tells jinja2 to not parse the internal text -->
+{% raw %}
 <script>
+    // This is our parent Vue instance, we are mounting it to the #root element in the index.html
     var vm = new Vue({
         template: `
-            <h1>{{ greeting }}</h1>
+        <div>
+            <h1 class="greet">{{ greeting }}</h1>
+            <home action="Loading Home component..."></home>
+        </div>
         `,
         el: '#root',
+        components: {
+            home
+        },
         data: {
-            greeting: "Running Vue from Flask is succcessful."
+            greeting: "Running Vue from Flask..."
         }
     })
 </script>
+<style scoped>
+    .greet {
+        color: black;
+    }
+</style>
 {% endraw %}
