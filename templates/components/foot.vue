@@ -1,13 +1,13 @@
 <!-- This raw tag followed by the script tag is what is needed, We do not include anything because this does not call any components  -->
 {% raw %}
 <script>
-var navi = {
+var foot = {
     template: `
-    <div>
-        <h1 class="has-text-info"> Welcome </h1>
-    </div>
+    <footer class="footer has-text-centered">
+        <h1>The BuFVuR footer 2018</h1>
+    </footer>
     `,
-    name: "navi",
+    name: "foot",
     data() {
         return {};
     }
