@@ -1,5 +1,5 @@
 <!-- This includes the home component -->
-{% include 'components/home.vue' %}
+{% include 'components/home.vue' %} {% include 'components/navi.vue' %}
 <!-- The raw tag tells jinja2 to not parse the internal text -->
 {% raw %}
 <script>
@@ -7,22 +7,24 @@
     var vm = new Vue({
         template: `
         <div>
-            <h1 class="greet">{{ greeting }}</h1>
-            <home action="Loading Home component..."></home>
+            <navi></navi>
+            <div class="has-text-centered">
+                <h1 :style=styling>{{ greeting }}</h1>
+                <home action="Loading Home component..."></home>
+            </div>
         </div>
         `,
         el: '#root',
         components: {
+            navi,
             home
         },
         data: {
-            greeting: "Running Vue from Flask..."
+            greeting: "Running Vue from Flask...",
+            styling: {
+                'color': 'black'
+            }
         }
     })
 </script>
-<style scoped>
-    .greet {
-        color: black;
-    }
-</style>
 {% endraw %}

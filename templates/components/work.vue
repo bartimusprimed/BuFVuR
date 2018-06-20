@@ -2,15 +2,15 @@
 {% raw %}
 <script>
 // Notice how we create a variable named test. this will make it available to the component that includes it.
-var test = {
-    props: ["work"],
+var work = {
+    props: ["working"],
     template: `
     <div>
-        <h1> Loaded the work component </h1>
-        <p class="has-text-weight-bold"> You should be {{ work }} </p>
+        <h1 class="has-text-info"> Loaded the work component </h1>
+        <p class="has-text-weight-bold"> You should be {{ working }} </p>
     </div>
     `,
-    name: "test",
+    name: "work",
     data() {
         return {};
     }

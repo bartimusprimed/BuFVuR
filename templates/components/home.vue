@@ -10,10 +10,10 @@ var home = {
     <div>
         <h1>{{ action }}</h1>
         <p> {{ status }} </p>
-        <test work="creating more components"></test>
+        <work working="creating more components"></work>
     </div>
     `,
-    components: { test },
+    components: { work },
     data() {
         return {
             status: "The component loaded successfully."
