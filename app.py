@@ -7,3 +7,7 @@ CORS(app)
 def index():
     # We are just returning the index.html
     return render_template('index.html')
+    
+@app.route('/contain')
+def contain():
+  return render_template('/components/contained.vue')
